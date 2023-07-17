@@ -1,3 +1,4 @@
+// importing files.
 import nodemailer from 'nodemailer';
 import Mailgen from 'mailgen';
 
@@ -5,6 +6,7 @@ import ENV from '../config.js';
 
 
 // https://ethereal.email/create
+// setting node config for gmail
 let nodeConfig = {
     host: "smtp.ethereal.email",
     port: 587,
@@ -33,6 +35,7 @@ let MailGenerator = new Mailgen({
   "subject" : "",
 }
 */
+// sending POST with parameters(username, useremail, text, subject)
 export const registerMail = async (req, res) => {
     const { username, userEmail, text, subject } = req.body;
 
